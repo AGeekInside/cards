@@ -27,13 +27,13 @@ class Card:
 
 
 class Deck:
-    '''Deck class.'''
+    """Deck class."""
 
     def __init__(self):
         self.generate_cards()
 
     def generate_cards(self):
-        '''Generates all the cards in a deck.'''
+        """Generates all the cards in a deck."""
 
         cards = []
         for suit in Suit:
