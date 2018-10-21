@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "6619083a1f973e3baf811d6bf43e53290b2b68550c3b9f347d0537a78bf69d69"
+            "sha256": "8e72577439138027868da1cab7776f10c4c983e64021e4cef34de128464a4955"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -40,6 +40,10 @@
             ],
             "index": "pypi",
             "version": "==0.5.3"
+        },
+        "cards": {
+            "editable": true,
+            "path": "."
         },
         "decorator": {
             "hashes": [

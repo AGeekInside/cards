@@ -22,15 +22,16 @@ AUTHOR = "Marc Brooks"
 REQUIRES_PYTHON = ">=3.6.0"
 VERSION = "0.1.0"
 
-REQUIRED = []
-# What packages are required for this module to be executed?
-with open(path.join(here, "required_packages.txt"), encoding="utf-8") as f:
-    REQUIRED = f.read().split("\n")
-
-ENTRY_POINTS = []
 
 here = os.path.abspath(os.path.dirname(__file__))
 
+# What packages are required for this module to be executed?
+REQUIRED = []
+with open(path.join(here, "required_packages.txt"), encoding="utf-8") as f:
+    REQUIRED = f.read().split("\n")
+
+# Lists the entrypoints for the module
+ENTRY_POINTS = []
 with open(path.join(here, "entrypoints.txt"), encoding="utf-8") as f:
     ENTRY_POINTS = f.read().split("\n")
 

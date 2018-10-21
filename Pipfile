@@ -9,6 +9,7 @@ click = "*"
 [dev-packages]
 bumpversion = "*"
 ipython = "*"
+cards = {editable = true, path = "."}
 
 [requires]
 python_version = "3.6"

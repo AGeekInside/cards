@@ -5,24 +5,11 @@
 from enum import Enum
 
 
-Suit = Enum("Spades", "Clubs", "Hearts", "Diamonds")
+Suit = Enum("Suit", "Spades Clubs Hearts Diamonds")
 
 
 Value = Enum(
-    "Ace",
-    "Two",
-    "Three",
-    "Four",
-    "Five",
-    "Six",
-    "Seven",
-    "Eight",
-    "Nine",
-    "Ten",
-    "Jack",
-    "Queen",
-    "King",
-    "Joker",
+    "Value", "Ace Two Three Four Five Six Seven Eight Nine Ten Jack Queen King Joker"
 )
 
 
@@ -36,4 +23,21 @@ class Card:
     def __repr__(self):
         """Outputs the object."""
 
-        print(f"{self.value} of {self.suit}")
+        return f"{self.value.name} of {self.suit.name}"
+
+
+class Deck:
+    '''Deck class.'''
+
+    def __init__(self):
+        self.generate_cards()
+
+    def generate_cards(self):
+        '''Generates all the cards in a deck.'''
+
+        cards = []
+        for suit in Suit:
+            for value in Value:
+                cards.append(Card(suit, value))
+
+        self.cards = cards
